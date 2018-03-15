@@ -29,7 +29,7 @@ final class ShotResult {
         if (!isHit) {
             throw new IllegalArgumentException("Missed shots can't sink ships.");
         }
-        
+
         return isShipSunk;
     }
 

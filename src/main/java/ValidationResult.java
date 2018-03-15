@@ -7,7 +7,7 @@ final class ValidationResult {
         return new ValidationResult(false, inputMessage);
     }
 
-    private boolean isValid = true;
+    private boolean isValid;
     private String message;
 
     private ValidationResult(boolean inputValidity, String inputMessage) {

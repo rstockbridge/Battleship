@@ -5,11 +5,7 @@ import java.util.HashSet;
 
 final class ShipGrid {
     private final Map<Ship, Set<Coordinate>> shipLocations = new HashMap<>();
-
-    Map<Ship, Set<Coordinate>> getShipLocations() {
-        return shipLocations;
-    }
-
+    
     ValidationResult validateShipPlacement(final ShipPlacement shipPlacement) {
         final boolean locationIsOnGrid = locationIsOnGrid(shipPlacement);
         final boolean locationIsFree = locationIsFree(shipPlacement);

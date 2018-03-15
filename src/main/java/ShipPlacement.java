@@ -1,7 +1,7 @@
 final class ShipPlacement {
-    Ship ship;
-    Coordinate location;
-    Direction direction;
+    private Ship ship;
+    private Coordinate location;
+    private Direction direction;
 
     void setShip(Ship inputShip) {
         ship = inputShip;

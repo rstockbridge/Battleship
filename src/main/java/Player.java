@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
 final class Player {
-    Ship[] listOfShips;
-    ShipGrid shipGrid;
-    ShotGrid shotGrid;
-    String name;
+    private Ship[] listOfShips;
+    private ShipGrid shipGrid;
+    private ShotGrid shotGrid;
+    private String name;
 
     Player(final String inputName) {
         createListOfShips();
@@ -44,7 +44,7 @@ final class Player {
     }
 
     Coordinate takeShot() {
-        Coordinate location = null;
+        Coordinate location;
         boolean shotIsValid;
 
         do {
@@ -78,7 +78,7 @@ final class Player {
 
     private void loadValidShipPlacement(final ShipGrid shipGrid, final ShipPlacement shipPlacement) {
         boolean directionIsValid;
-        Direction direction = null;
+        Direction direction;
 
         do {
             shipPlacement.setLocation(getInputLocation(shipPlacement.getShip().getName()));
@@ -115,7 +115,7 @@ final class Player {
 
             final Scanner scanner = new Scanner(System.in);
             final String locationText = scanner.nextLine();
-            
+
             final ValidationResult locationTextValidation = validateLocationText(locationText);
             locationTextIsValid = locationTextValidation.isValid();
 
