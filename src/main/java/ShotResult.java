@@ -26,7 +26,7 @@ final class ShotResult {
     }
 
     boolean isShipSunk() {
-        if (!isHit) {
+        if (!isHit && isShipSunk) {
             throw new IllegalArgumentException("Missed shots can't sink ships.");
         }
 
