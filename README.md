@@ -3,11 +3,13 @@
 A two-player command line battleship game.
 
 
-# Getting Started
+# Playing the Game
 
-1. Compile using `javac *.java`.
+* From this directory using gradle: `./gradlew run`
 
-2. Run using `java PlayBattleship`.
+* From `src/main/java`:
+	1. Compile using `javac *.java`
+	2. Run using `java PlayBattleship`
 
 # License
 

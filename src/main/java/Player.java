@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 final class Player {
     Ship[] listOfShips;
     ShipGrid shipGrid;
@@ -83,7 +85,8 @@ final class Player {
 
             System.out.format("Enter the direction for your %s: ", shipPlacement.getShip().getName());
 
-            final String directionText = System.console().readLine();
+            final Scanner scanner = new Scanner(System.in);
+            final String directionText = scanner.nextLine();
             final ValidationResult directionTextValidation = validateDirectionText(directionText);
 
             if (directionTextValidation.isValid()) {
@@ -110,7 +113,9 @@ final class Player {
         do {
             System.out.format("\nEnter the location for your %s: ", item);
 
-            final String locationText = System.console().readLine();
+            final Scanner scanner = new Scanner(System.in);
+            final String locationText = scanner.nextLine();
+            
             final ValidationResult locationTextValidation = validateLocationText(locationText);
             locationTextIsValid = locationTextValidation.isValid();
 
